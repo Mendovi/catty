@@ -1,307 +1,34 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html lang='ru'>
-<head>
-<title>Зона | КвМЧ</title>
-<meta name="generator" content="КвМЧ" />
-<meta name="developer-contacts" content="admin@kvmch.cat" />
-<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<noscript><meta http-equiv="refresh" content="0; URL=/badbrowser.php"></noscript>
-<link media="screen" href="https://kvmch.cat/templates/Default/style/style.css?1644928732" type="text/css" rel="stylesheet" />  
-<script type="text/javascript" src="https://kvmch.cat/getjs?charset=utf-8&g=general&t=12"></script>
-<script type="text/javascript" src="https://kvmch.cat/js/scripts.js?1644928732"></script>
-<link href="https://kvmch.cat/templates/Default/css/blog.css" type="text/css" rel="stylesheet" />
-<link rel="stylesheet" type="text/css" href="https://kvmch.cat/templates/Default/css/style.css?1644928732" />
-<link rel="stylesheet" type="text/css" href="https://kvmch.cat/templates/Default/css/engine.css" />
-<link rel="stylesheet" type="text/css" href="https://kvmch.cat/templates/Default/css/layout.css" />
-<link rel="shortcut icon" type="icon" href="https://kvmch.cat/favicon.ico" />
-<script>
-$( document ).ready(function() {
-version_js_cache_1 = '5.2';
-if (typeof version_js_cache !== 'undefined') {
-	if(version_js_cache != version_js_cache_1)
-		$('body').html('<br><br><br><br><center><font size="4">Кэш браузера устарел.<br>Для корректной работы, пожалуйста, отчистите кэш Вашего браузера и перезагрузите страницу.</font></center>'); 
-} else
-	$('body').html('<br><br><br><br><center><font size="4">Кэш браузера устарел.<br>Для корректной работы, пожалуйста, отчистите кэш Вашего браузера и перезагрузите страницу.</font></center>'); 
-});
-</script>
-</head>
-<body>
-<a class="button_top" id="toTop" onclick="$('body,html').animate({scrollTop:0}, 800); return false;">Наверх</a>
-	<div class="page">
-	<div id="NotifyBlock"></div>
-		<div id="front-wrapper">
-		  <div id="front">
-		    <div style="width: 326px;" class="column">
-					<div class="box mainmenu">
-                    <div class="bhead">Меню</div>
-					
-                    <table>
-                        <tr>
-                        <td>
-						<dl>
-						<dt><a href="/">Моя страница</a></dt>
-						</dl>
-						<dl>
-						<dt><a href="/cinc" title="Игровое поле">Игра</a></dt>
-						</dl>
-						<dl>
-						<dt><a href="/messages" title="Личные Сообщения">Сообщения </a></dt>
-						</dl>
-						<dl>
-						<dt><a href="/?go=search" title="Список всех пользователей сайта">Жители Зоны</a></dt>
-						</dl>
-						<dl>
-						<dt><a href="/?go=faction" title="Список всех группировок, стай, объединений Зоны">Группировки</a></dt>
-						</dl>
-						<dl>
-						<dt><a href="/chat" title="Общий чат всех пользователей">Чат</a></dt>
-						</dl>
-						<dl>
-						<dt><a href="/support" title="Помощь по сайту и решение проблем">Поддержка </a></dt>
-						</dl>
-						<dl>
-						<dt><a href="/?act=logout" title="Выйти">Выйти</a></dt>
-						</dl>
-                        </td>    
-                        </tr>
-                 </table>
-                   
-				   
-                  <div class="bfoot"></div>
-                    </div>
-</div>
-			<div class="topline">
-<div align="right">
-<tr>
-<td width="370" height="55" align="center" valign="middle" ></td>
-</tr>
-</div>			
-</div>
-<div id="mask-main" style="width: 925px;" class="mask">
-<div style="width: 925px;" class="mainpart">
-<div style="background:none; width: 925px;" id="content-box" class="box">          
-<div style="background:none; height: 13px;" class="bhead"></div>
-
-<script type="text/javascript" src="/getjs?charset=utf-8&g=game&t=1644928732"></script>
-<link media="screen" href="/templates/Default/css/game_main.css?1644928732" type="text/css" rel="stylesheet" />
-<link media="screen" href="/templates/Default/css/animation.css?1644928732" type="text/css" rel="stylesheet" />
-<script type="text/javascript">
-window.onerror = function(msg) {
-$('#content-box').html('<font size="4" style="position:absolute; margin-top: 64px; margin-left: 64px;">Возникла JavaScript ошибка. Игровое поле не может быть подгружено. Обновите страницу и поробуйте еще раз.<br><br>'+msg+'.</font>');
-Page.Loading('stop');
-}
-$(document).ready(function() {
-Page.Loading('start');
-$('#content-box').css('width', '1080px');
-$('#mask-main').css('width', '1080px');
-$('.mainpart').css('width', '1080px');
-$('#mask-main').css('padding-top', '0px');
-$('.mainpart').css('width', '1080px');
-$('#front').css('width', '1080px');
-$('.topline').remove();
-$('.column').remove();
-$('#front').css('margin', '-7px auto').css('background', 'none');
-mobile_template = 1;
-if(mobile_template == 0){
-$('#game').css('min-width', '1060px').css('position', 'absolute').css('width', '100%');
-$('#game').html($('#game').html()+'<div style="width: 100%; min-width: 1060px; position: relative;" id="caharacter_info_m" class="character_info">'+$('#caharacter_info').html()+'</div>');
-$('#caharacter_info').remove();
-$('a').css('color', '#c58545');
-$('.rad_str_ch').css('top', '70.6%').css('right', '-2%');
-} else {
-$('#content-box').css('width', '1080px');
-}
-chr_id = '7145';
-loc_id = '22';
-setRadInd(15);
-muteVoice_id = '|';
-enableVoiceData = '0';
-background_location42 = '/img/locations/e8ec379ffe0e67eb700a9c0371ed1dd4.png';
-
-const fpPromise = new Promise((resolve, reject) => {
-    const script = document.createElement('script')
-    script.onload = resolve
-    script.onerror = reject
-    script.async = true
-    script.src = '/js/fp.min.js'
-    document.head.appendChild(script)
-  })
-    .then(() => FingerprintJS.load())
-  fpPromise
-    .then(fp => fp.get())
-    .then(result => {
-      const visitorId = result.visitorId
-	  ConnectGameServer(visitorId)
-    })
-});
-</script>
-
-<font id="loadingigpl" style="position:absolute; margin-top: 64px; margin-left: 64px;" size="4"><br>Пожалуйста, подождите, идет загрузка игры...<br>Если игра не загружается долгое время, проверьте Ваше соединение с Интернетом.<br><br></font>
-<noscript><font style="position:absolute; margin-top: 64px; margin-left: 64px;" size="4">Запуск игры невозможен, так как в браузере не поддерживается или выключен JavaScript.<br><br></font></noscript>
-<div style="display: none;" class="gameBlock" id="game">
-<span id="styleCageOpacity"></span>
-<a href="/">Главная</a> | <a target="_blank" href="/chat">Общий чат</a> | <a onclick="$('#cnt_supp_s').hide();$('#cnt_supp').html('');" target="_blank" href="/support">Поддержка <span style="display:none;background-color: white;color: black;font-size: 15px;" id="cnt_supp_s">(<span id="cnt_supp"></span>)</span></a> | <a target="_blank" onclick="$('#cnt_msg_s').hide();$('#cnt_msg').html('');" href="/messages">ЛС <span style="display:none;background-color: white;color: black;font-size: 15px;" id="cnt_msg_s">(<span id="cnt_msg"></span>)</span></a> | <a href="/?act=logout">Выйти с сайта</a>
-<br><br>
-<div id="lochat" style="border: 1px solid rgba(0, 0, 0, 0.1); border-radius: 2px; color: #2b2b2b; overflow-y: scroll; padding:4px; height: 200px;"><div id="lochat_block"></div></div>
-<br>
-<input type="text" id="message" class="inpst" 	onKeyPress="if(((event.keyCode == 13) || (event.keyCode == 10)) && (event.ctrlKey == false)) sendMessageGame()" maxlength="200" style="width: 88%;height: 17px;" placeholder="Введите Ваше сообщение..."><div class="voice_message_gf" title="Голосовое сообщение" onclick="voiceMessage();"></div><div style="padding: 0px 5px;" class="button_div fl_r"><button onclick="sendMessageGame();" id="msgsend">Сказать!</button></div>
-<small>(<a onclick="clearChatLoc(); return false;" href="#">очистить чат</a>)</small>&nbsp;&nbsp; <div class="voice_enable_dis_gf" onclick="enableVoice();" title="Включить/отключить голосовые сообщения"></div>
-<br><br>
-<font id="info_strtr" size="4">Похоже, Вы начали выполнять какое-то действие, но не завершили его. Аннулируйте действие, иначе Вы не сможете выполнять другие: <a href="#" onclick="cancelAction(1); return false;">аннулировать</a><br></font>
-<br>
-Локация: <span style="font-weight: bold;" id="nameLocation">Детский сад</span> | <a id="linkOffLoc" href="/" onclick="offEffectsLocatuion(); return false;">Убрать эффекты</a> | <a href="/" onclick="setMobileGame(1); return false;">Поставить мобильную версию</a><span id="dpActionLoc"></span>
-<span id="time" style="font-size: 13px;"><br><br><span class="smtitle" style="cursor: help;" data-title="24-часовой формат времени">Время: <span id="time_hours">15</span> часов.</span> Температура на улице: <span style="cursor: help;" class="smtitle" data-title="Погода указана конкретно для этой локации">-15°C, <span id="weather_name">ясно.</span></span></span>
-<br><br>
-<div id="personal_style">
-<div style="background: url(/img/locations/e8ec379ffe0e67eb700a9c0371ed1dd4.png) no-repeat; width: 1027px;height: 990px;background-repeat: round;" id="background_location">
-<table id="game_location" style=" position: absolute;width: 1028px;height: 990px;" data-effect="" data-type="" data-mycage="1" data-radiation="15" data-psy="0">
-
-<tbody id="update_game_cages">
-</tbody>
-
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>Регистрация / CatWar</title><noscript><meta http-equiv="refresh" content="0; URL=/noscript"></noscript><style>textarea {padding: 4px}</style><link rel="stylesheet" href="https://e.catwar.su/css/all.css?350629802"><link rel="stylesheet" href="https://e.catwar.su/css/all.css?350629802"><link rel="stylesheet" href="//e.catwar.su/css/reg.css?276470626"><script src="//e.catwar.su/js/jquery.js?268881668"></script><script src="//e.catwar.su/js/reg.js?362035931"></script><script src="//e.catwar.su/js/ssl.js?350630126"></script><script async src='//e.catwar.su/js/all.js?364544708'></script><script src="https://www.google.com/recaptcha/api.js?hl=ru" async defer></script><style>#menu_div{margin-top:2px}</style></head><body><div id="logo"></div><div id="menu_div"> <a href="/about"><div class="kn7" title="Об игре"> </div></a> <a href="/reg"><div class="kn13" title="Регистрация"> </div></a> <a href="/login"><div class="kn5" title="Вход"> </div></a> <a href="/mail"><div class="kn12" title="Забыл пароль"> </div></a> </div><div id="site_table" style="padding: 1px 1px" data-mobile="0"><div id="branch">
+<div id="error"><ul><li>Пожалуйста, включите в вашем браузере JavaScript.</li></ul></div>
+<p><a href="https://oauth.vk.com/authorize?client_id=6800968&redirect_uri=https%3A%2F%2Fcatwar.su%2Freg&display=page" style="background: #587EA3; color: black; padding: 5px; border-radius: 3px">Вход через ВКонтакте</a> <a href="https://youtu.be/Yyhud_VYnFc" style="color: black">Обучающий ролик</a></p>
+<form id="reg_form">
+<p>Имя должно быть лесным и котячьим (если вы не одиночка). По желанию вы можете воспользоваться генератором имён (укажите перед этим пол).</p>
+<table id="form_table">
+<tr><td class="td_name">Имя <a href="#" id="random">[Случайное]</a>:</td><td class="td_field"><input type="text" id="login"></td></tr>
+<tr><td class="td_name">Пароль:</td><td class="td_field"><input type="password" id="pass"></td></tr>
+<tr><td class="td_name">Пароль (ещё раз):</td><td class="td_field"><input type="password" id="pass2"></td></tr>
+<tr><td class="td_name">Ваш e-mail:</td><td class="td_field"><input type="text" id="mail"></td></tr>
+<tr><td class="td_name">Ваше настоящее имя:</td><td class="td_field"><input type="text" id="real_name"></td></tr>
+<tr id="birthday"><td class="td_name">Ваша дата рождения:</td><td class="td_field">
+<select id="day"><option value='1'>1</option><option value='2'>2</option><option value='3'>3</option><option value='4'>4</option><option value='5'>5</option><option value='6'>6</option><option value='7'>7</option><option value='8'>8</option><option value='9'>9</option><option value='10'>10</option><option value='11'>11</option><option value='12'>12</option><option value='13'>13</option><option value='14'>14</option><option value='15'>15</option><option value='16'>16</option><option value='17'>17</option><option value='18'>18</option><option value='19'>19</option><option value='20'>20</option><option value='21'>21</option><option value='22'>22</option><option value='23'>23</option><option value='24'>24</option><option value='25'>25</option><option value='26'>26</option><option value='27'>27</option><option value='28'>28</option><option value='29'>29</option><option value='30'>30</option><option value='31'>31</option></select><select id="month"><option value='1'>января</option><option value='2'>февраля</option><option value='3'>марта</option><option value='4'>апреля</option><option value='5'>мая</option><option value='6'>июня</option><option value='7'>июля</option><option value='8'>августа</option><option value='9'>сентября</option><option value='10'>октября</option><option value='11'>ноября</option><option value='12'>декабря</option></select><select id="year"><option value='1970'>1970</option><option value='1971'>1971</option><option value='1972'>1972</option><option value='1973'>1973</option><option value='1974'>1974</option><option value='1975'>1975</option><option value='1976'>1976</option><option value='1977'>1977</option><option value='1978'>1978</option><option value='1979'>1979</option><option value='1980'>1980</option><option value='1981'>1981</option><option value='1982'>1982</option><option value='1983'>1983</option><option value='1984'>1984</option><option value='1985'>1985</option><option value='1986'>1986</option><option value='1987'>1987</option><option value='1988'>1988</option><option value='1989'>1989</option><option value='1990'>1990</option><option value='1991'>1991</option><option value='1992'>1992</option><option value='1993'>1993</option><option value='1994'>1994</option><option value='1995'>1995</option><option value='1996'>1996</option><option value='1997'>1997</option><option value='1998'>1998</option><option value='1999'>1999</option><option value='2000'>2000</option><option value='2001'>2001</option><option value='2002'>2002</option><option value='2003'>2003</option><option value='2004'>2004</option><option value='2005'>2005</option><option value='2006'>2006</option><option value='2007'>2007</option><option value='2008'>2008</option><option value='2009'>2009</option><option value='2010'>2010</option><option value='2011'>2011</option><option value='2012'>2012</option><option value='2013'>2013</option><option value='2014'>2014</option><option value='2015'>2015</option></select> </td></tr>
+<tr><td class="td_name">Ваш пол:</td><td class="td_field"><select id="pol"><option value="2">-Выберите пол-</option><option value="0">Кошка</option><option value="1">Кот</option></select></td></tr>
 </table>
-</div>
-</div>
-</div>
-<span id="html_location"></span>
-<span id="audio_location"></span>
-<span id="audio_ootl"></span><div style="display:none;" id="caharacter_info" class="character_info">
-
-<table id="character_info" style="padding-left: 15px;">
-
-<tbody>
-
-<tr>
-
-<td style="width: 166px;height: 160px;" id="info_1">
-<font style="position: absolute;" size="4">Жизненные показатели</font>
-<br><br>
-<div id="hear_bar">
-<span id="heart_icon" data-title="Здоровье" class="heart-icon smtitle"></span>
-<div class="progress-bar_new new_progress_bar stripes" onclick="showIndicatorsInfo('heart');">
-    <span id="heart" data-val="100" style="max-width: 100%; width: 100%"></span>
-</div></div>
-<div class="clear"></div>
-<div id="energy_bar">
-<span data-title="Энергия" id="energy_icon" class="energy-icon smtitle"></span>
-<div class="progress-bar_new new_progress_bar stripes" onclick="showIndicatorsInfo('energy');">
-    <span id="energy" data-val="105" style="max-width: 100%; width: 105%"></span>
-</div><a id="plus_energy" style="position: absolute;margin-top: -3%;margin-left: 11.5%;font-size: 18px;" onclick="restoreEnergy(); return false;" title="Восстановить энергию" href="#">+</a></div>
-<div class="clear"></div>
-
-<div id="sleep_bar">
-<span data-title="Сонливость"  id="sleep_icon" class="sleep-icon smtitle"></span>
-<div class="progress-bar_new new_progress_bar_contr stripes" onclick="showIndicatorsInfo('sleep');">
-    <span id="sleep" data-val="12" style="max-width: 100%; width: 12%"></span>
-</div></div>
-<div class="clear"></div>
-
-<div id="hunger_bar">
-<span data-title="Голод"  id="hunger_icon" class="hunger-icon smtitle"></span>
-<div class="progress-bar_new new_progress_bar_contr stripes" onclick="showIndicatorsInfo('hunger');">
-    <span id="hunger" data-val="3" style="max-width: 100%; width: 3%"></span>
-</div></div>
-<div class="clear"></div>
-<div id="thirst_bar">
-<span data-title="Жажда" id="thirst_icon" class="thirst-icon smtitle"></span>
-<div class="progress-bar_new new_progress_bar_contr stripes" onclick="showIndicatorsInfo('thirst');">
-    <span id="thirst" data-val="4" style="max-width: 100%; width: 4%"></span>
-</div></div>
-<div class="clear"></div>
-<div id="toilet_bar">
-<span data-title="Потребности"  id="toilet_icon" class="toilet-icon smtitle"></span>
-<div class="progress-bar_new new_progress_bar_contr stripes" onclick="showIndicatorsInfo('toilet');">
-    <span id="toilet" data-val="0" style="max-width: 100%; width: 0%"></span>
-</div></div>
-<div class="clear"></div>
-<div id="radiation_bar">
-<span data-title="Радиоактивное заражение"  id="radiation_icon" class="radiation-icon smtitle"></span>
-<div class="progress-bar_new new_progress_bar_contr stripes" onclick="showIndicatorsInfo('radiation');">
-    <span id="radiation" data-val="102" style="max-width: 100%; width: 102%"></span>
-</div></div>
-</td>
-
-<td style="width: 252px;height: 160px;" id="info_2">
-<font size="4">Параметры</font><br><br>
-<button onclick="openInventory('7145');">Открыть инвентарь</button>
-<br><br>
-<button onclick="openProgress('2984');">Показать Достижения</button>
-<br><br>
-<button onclick="tasks.showMyTasks();">Показать Задачи</button>
-</td>
-
-<td style="width: 186px;height: 160px;" id="info_3">
-<font size="4">Действия</font>
-<br><br>
-<div id="actions_001">
-<a onclick="goBury(); return false;" href="/">Копать землю</a><br><br>
-<span style="overflow-y: scroll;" id="resultBury"></span>
-<a onclick="goToilet('go'); return false;" href="/">Справить потребности</a><br><br>
-<a id="goStalk" onclick="goStalk(); return false;" href="/">Охотиться на дичь</a><br><br>
-<a id="goSniff" onclick="sniffGo(); return false;" href="/">Вынюхивать дичь</a>
-<span style="display:none;" id="sleep_action"><br><br><a onclick="sleep(); return false;" href="/">Поспать</a></span>
-<span id="actSArtefacts" style="display: none;"><br><br><a onclick="goSArtefacts(); return false;" href="/">Искать артефакты</a></span><br><br>
-<a id="LinkDuelMode" href="#" onclick="duelMode(); return false;">Перейти в боевой режим</a><br><br>
-<a href="#" onclick="openJournal(); return false;">Почитать мой журнал</a>
-<span style="display:none;" id="waterLoc"><br><br><a href="#" onclick="changeWaterLoc(); return false;">Попить воды</a></span>
-</div>
-</td>
-
-<td style="width: 242px;" id="info_4">
-<font id="data_pers_title" size="4">Данные персонажа</font><br><br>
-<div id="data_pers_table">
-Мой персонаж:<br>Чернозмейка
-<br><br>
-Уровень: <span id="level_spn">1</span>
-<br>
-Опыт: 0/4
-<br><br>
-Монетки: <span id="cost_my_f">0</span>
-<br><br>
-Охотничьи возможности: <span class="smtitle" id="stlk_lvl" data-title="На день"><a style="cursor: help;">3</a></span>/<span class="smtitle" data-title="Использовано"><a style="cursor: help;" id="stlk_cnt">0</a></span>
- 
-<span id="protection_data">  </span>
-</div>
-<div id="duelMode"></div>
-</td>
-
-<td id="info_5">
-<font size="4">Индикаторы</font><br><br>
-<div class="rad_ch smtitle" id="geiger_sc" data-signal="0" data-title="Излучение 0 Ед" onclick="openNotifeGameInfo('Радиоактивное '+$('#geiger_sc').attr('data-title'))"><span class="rad_str_ch"></span></div>
-</td>
-
-</tr>
-
-</tbody>
-
-</table>
-
-</div>
-<script>$(document).ready(function() {indicatorAlter('energy', 'set', '105');
-					indicatorAlter('heart', 'set', '100');
-					indicatorAlter('toilet', 'set', '0');
-					indicatorAlter('radiation', 'set', '102');
-					indicatorAlter('sleep', 'set', '12');});</script>
-
-<div style="background: none;" class="bfoot"></div>
-</div>
-</div>
-	<div class="clear"></div>
-	</div>
-<div class="page-footer2">
-	<div class="footer2">
-<div id="footer" class="wwide">
-	<div class="wrapper"><div>
-		<span class="copyright">
-			Copyright &copy; 2018 - 2021
-<u><a target="_blank" href="https://vk.com/kvmch">Команда КвМЧ</a></u>. <u><a target="_blank" href="/news">Важные новости</a></u> | <u><a target="_blank" href="/?go=info&act=terms">Правила сайта</a></u> | <u><a href="/?ver=m">Поставить мобильную версию</a></u>
-<br>
-		</span>
-		 
-	</div></div>
-</div>
-</div>
-</div></div> 
-</div>
-</body>
-</html>
+<p><input type="submit" value="Продолжить"></p>
+</form>
+<form id="clans">
+<p><i>Выберите несколько племён, если хотите случайным образом попасть в одно из них, или одно племя, если вы уверены в своём выборе.</i></p>
+<table id="clan_table">
+<td><h2>Озёрная вселенная</h2></td><td><h2>Морская вселенная</h2></td><td><h2>Вселенная творцов</h2></td></tr><tr><td><i>Самая многочисленная вселенная. В этой вселенной расположились сразу четыре племени и два клана, обитающие на озёрной территории. Племена живут на берегах обширного озера, где в лесах, на ручьях и полях проложены границы между ними, а клановые земли — далеко в горах, рядом со снежными вершинами. В Озёрной вселенной, как и во всех других, присутствуют одиночки, вольные ходить туда, куда им велит душа. В больших количествах их можно найти на нейтральных землях — в городе, посёлке, а также в туннелях и на горных тропах.</i></td><td><i>Вторая по населённости вселенная. В этой вселенной сосуществуют три племени, расположившиеся на побережье и в скалах возле большой воды. Все три племени граничат между собой и имеют выход к нейтральным землям, где можно встретить одиночек. Одиночки Морской вселенной чаще всего обитают в Деревне, хоть и вольны ходить там, где им вздумается.</i></td><td><i>Самая творческая вселенная, где игрок сам создаёт мир вокруг себя за игровую валюту. Этот игровой мир делится на племенных творцов и творцов-одиночек, каждый из которых может действовать в своих интересах. В лапах творца оказывается сразу несколько возможностей — возможность создать свою собственную территорию, дать ей название, заселить дичью или рассадить множеством полезных для лечения трав. Творец может попробовать создать своё собственное племя, если за ним пойдут его друзья-единомышленники. Чем крупнее и дружнее будет племя, тем больше привилегий для него откроется, и одна из самых важных привилегий — доступность племени при регистрации.</i></td></tr><tr><td><input type='checkbox' value='1' class='clan' id='clan1'><label for='clan1'> Грозовое племя</label><br><input type='checkbox' value='2' class='clan' id='clan2'><label for='clan2'> племя Ветра</label><br><input type='checkbox' value='3' class='clan' id='clan3'><label for='clan3'> Речное племя</label><br><input type='checkbox' value='4' class='clan' id='clan4'><label for='clan4'> племя Теней</label><br><input type='checkbox' value='6' class='clan' id='clan6'><label for='clan6'> одиночки</label><br><input type='checkbox' value='11' class='clan' id='clan11'><label for='clan11'> Клан Падающей Воды</label><br><input type='checkbox' value='19' class='clan' id='clan19'><label for='clan19'> Северный клан</label><br></td><td><input type='checkbox' value='7' class='clan' id='clan7'><label for='clan7'> одиночки</label><br><input type='checkbox' value='12' class='clan' id='clan12'><label for='clan12'> Морское племя</label><br><input type='checkbox' value='13' class='clan' id='clan13'><label for='clan13'> племя Солнца</label><br><input type='checkbox' value='14' class='clan' id='clan14'><label for='clan14'> племя Луны</label><br></td><td><input type='checkbox' value='8' class='clan' id='clan8'><label for='clan8'> одиночки</label><br><input type='checkbox' value='150' class='clan' id='clan150'><label for='clan150'> племя Неразгаданных Тайн</label><br><input type='checkbox' value='152' class='clan' id='clan152'><label for='clan152'> Крылатое племя</label><br><input type='checkbox' value='205' class='clan' id='clan205'><label for='clan205'> клан Ледяного Дождя</label><br><input type='checkbox' value='222' class='clan' id='clan222'><label for='clan222'> шайка Разбитого Корабля</label><br><input type='checkbox' value='232' class='clan' id='clan232'><label for='clan232'> Эльфийские земли</label><br><input type='checkbox' value='313' class='clan' id='clan313'><label for='clan313'> Чернолесье</label><br><input type='checkbox' value='403' class='clan' id='clan403'><label for='clan403'> Санта-Муэрте</label><br></td></tr> </table>
+<p><b>Подтвердите, что вы не робот:</b></p> <div class="g-recaptcha" data-sitekey="6LdCBl0UAAAAAKGGmLQFgfDmFRAtb-GQ25Yg6Erv"></div>
+<p><input type="checkbox" class="accept" id="accept"><label for="accept"> Согласен с <a href="about?id=1">правилами игры</a>, <a href="about?id=16">лицензионным соглашением</a> и, в частности, подтверждаю, что это мой единственный персонаж (если с компьютера сидит больше одного человека, нужно будет после регистрации указать это в настройках)</label></p>
+<p><input type="submit" value="Зарегистрироваться"> <input type="button" value="Назад" id="back"></p>
+</form>
+<p id="queen"><a href="queen">Список королев</a> (список беременных кошек, в чьей семье вы можете оказаться; если таковых в вашем племени не будет, вашими родителями будут боты)</p>
+<p id="loading"><img src="img/loading.gif"></p>
+<p id="success">Вы успешно зарегистрированы под именем <span id="success_name">?</span>! <a href="login">Войти</a></p>
+<p id="fail">К сожалению, зарегистрироваться почему-то не получилось. Попробуйте ещё раз чуть позже или напишите на почту <a href="/cdn-cgi/l/email-protection#7a1b1e1713143a191b0e0d1b0854090f"><span class="__cf_email__" data-cfemail="1273767f7b7c527173666573603c6167">[email&#160;protected]</span></a>.</p>
+</div></div><div id="footer" style="padding: 10px 0"><a href="/cat9">Техническая поддержка</a> | <a href="/blog101">Важные посты</a> | <a href="/blog27">ЧаВо</a><br><a href="/mobile">Поставить мобильную версию</a>
+<br>Дизайн © <a href="/cat753710">Дымница</a>.</div>
+ <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript"> (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym"); ym(6984625, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/6984625" style="position:absolute; left:-9999px;" alt="" /></div></noscript> 
+<div id="scroll_bottom"></div>
+</body></html>
